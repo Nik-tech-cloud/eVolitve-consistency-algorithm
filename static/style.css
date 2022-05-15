@@ -1,0 +1,123 @@
+:root {
+    --dark_blu: #053868;
+    --green_dark: #379683;
+    --light_green: #5CDB95;
+    --lime_green: #8EE4AF;
+    --beish: #EDF5E1;
+}
+
+body {
+    background-color: var(--light_green);
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0%;
+}
+
+form {
+    background-color: var(--beish);
+    border-radius: 0.5rem;
+    padding: 10px;
+    width: 25rem;
+    box-shadow: 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: auto;
+}
+
+input {
+    height: 30px;
+    margin-bottom: 1rem;
+    width: 24rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+}
+
+form>input {
+    margin-top: 2rem;
+}
+
+/* CLASS SELECTORS */
+
+.logo-wrapper {
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    margin-top: 5rem;
+}
+
+.form-div {
+    width: 100%;
+    height: 50vh;
+    padding: auto;
+}
+
+/* ID SELECTORS */
+
+#logo {
+    margin-top: 10%;
+    width: 300px;
+}
+
+#reg {
+    font-size: 0.5rem;
+}
+
+
+
+
+
+/*START OF BUTTON CODE*/
+
+/* CSS */
+.button-31 {
+  background-color: var(--green_dark);
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  margin: 0;
+  max-width: none;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.button-31:hover,
+.button-31:focus {
+  box-shadow: 0.09rem 0.09rem rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 980px) {
+    .logo-wrapper {
+        width: 30%;
+        text-align: left;
+        display: inline;
+        margin: 0 10rem;
+        margin-top: 35vh;
+        display: inline-block;
+        padding: 0;
+    }
+    
+    .form-div {
+        width: 50%;
+        display: inline-block;
+        padding: auto;
+        position: absolute;
+        margin-top: 32vh;
+    }
+
+    form {
+        margin: 0;
+    }
+    
+}

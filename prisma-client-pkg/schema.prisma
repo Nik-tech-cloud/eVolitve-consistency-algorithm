@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider        = "prisma-client-js"
+    output          = "../prisma-client-pkg/"
+    previewFeatures = ["interactiveTransactions"]
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model RelayClient {
+    id                 String               @id
+    lastPing           DateTime             @default(now())
+    group              RelayGroup?          @relation(fields: [groupId], references: [id])
+    groupId            Int?
+    messages RelayClientMessage[]
+}
+
+model RelayGroup {
+    id      Int           @id @default(autoincrement())
+    clients RelayClient[]
+}
+
+model RelayClientMessage {
+    id       Int         @id @default(autoincrement())
+    clientId String
+    client   RelayClient @relation(fields: [clientId], references: [id], onDelete: Cascade)
+    message  String
+}
